@@ -25,6 +25,8 @@ def main():
     parser.add_argument("output")
     args = parser.parse_args()
     grayscale(args.input, args.output)
+    print("Use this command to convert from RGB grayscale to real grayscale: \n"
+          f"  gdal_translate -expand gray {args.output} grayscale_{args.output}")
 
 
 if __name__ == "__main__":
